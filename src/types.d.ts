@@ -7,10 +7,10 @@ export type route = {
 export type ToDo = {
     title: string,
     completed: boolean,
-    id: ToDoID
+    id: ID
 } 
 
-type ToDoID = `${string}-${string}-${string}-${string}`
+type ID = `${string}-${string}-${string}-${string}`
 
 export enum DispatchType {
     ADD = "add",
@@ -21,7 +21,13 @@ export enum DispatchType {
 export interface ActionDispatch{
     type: DispatchType
     payload : {
-        id: ToDoID
+        id: ID
         title?:string
     }
 } 
+
+export type Quote = {
+    content: string
+    author: string
+    id: ID
+}

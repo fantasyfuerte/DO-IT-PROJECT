@@ -1,4 +1,5 @@
 import Nav from "./components/Nav";
+import QuotesApp from "./components/QuotesApp";
 import ToDoApp from "./components/ToDoApp";
 import { type route } from "./types";
 function App() {
@@ -10,10 +11,10 @@ function App() {
   return (
     <>
       <Nav routes={routes} />
-      <h1 className="text-4xl pl-3 font-semibold mt-20">
-        Boost Your Productivity
-      </h1>
-      <ToDoApp />
+      <main className="flex justify-between pt-16 items-center">
+        <ToDoApp />
+        <QuotesApp />
+      </main>
     </>
   );
 }

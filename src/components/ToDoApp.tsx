@@ -49,12 +49,12 @@ const ToDoApp: React.FC = () => {
 
   return (
     <>
-      <section className="xl:w-1/3 md:w-1/2 m-3 p-2 shadow-md rounded-md shadow-amber-900 bg-white mt-10 min-h-24">
+      <section className="xl:w-1/3 md:w-1/2 ml-14 p-2  rounded-md mt-12 min-h-24 h-fit shrink-0">
         {toDoState.length < 5 && (
           <div className="flex flex-col items-center w-full">
             <input
               type="text"
-              placeholder="5 most important things for today"
+              placeholder="Five most important things for today"
               onChange={(e) => setTitle(e.target.value)}
               onKeyDown={handleEnter}
               value={title}
@@ -63,6 +63,11 @@ const ToDoApp: React.FC = () => {
           </div>
         )}
         <ul className="">
+          {toDoState.length == 0 && (
+            <p className="text-center opacity-60 text-lg font-semibold">
+              No tasks
+            </p>
+          )}
           {toDoState.map((todo) => (
             <ToDoCard todo={todo} dispatch={dispatch} />
           ))}

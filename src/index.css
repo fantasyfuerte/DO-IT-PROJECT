@@ -4,14 +4,18 @@
 
 @layer base {
   :root {
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
 }
-body{
+body {
   background-color: rgb(255, 255, 229);
   user-select: none;
 }
 
-.decoration-line{
+.decoration-line {
   text-decoration: line-through 3px solid #fff;
+}
+
+.textshadow {
+  text-shadow: 0 10px 15px #7e5514;
 }

@@ -3,6 +3,8 @@
 ## Introduction
 Welcome to **DO-IT-NOW**, your ultimate productivity enhancement tool! This web application is designed to help you achieve  your daily goals effortlessly and stay organized throughout your day.
 
+[![image](project-screenshot.png)]
+
 ## Features
 - **Task List**: Easily add, edit, and mark tasks as completed.
 - **Daily Inspiration**: Get motivated with quotes and tips

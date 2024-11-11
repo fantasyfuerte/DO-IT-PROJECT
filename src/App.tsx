@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Nav routes={routes} />
-      <main className="flex justify-between pt-16 items-center">
+      <main className="flex justify-between pt-16 items-center h-96">
         <ToDoApp />
         <QuotesApp />
       </main>

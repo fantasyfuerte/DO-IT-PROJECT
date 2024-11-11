@@ -5,7 +5,9 @@ import { routes } from "./constants";
 function App() {
   return (
     <>
-      <Nav routes={routes} />
+      <header>
+        <Nav routes={routes} />
+      </header>
       <main className="flex justify-between pt-16 items-center h-96">
         <ToDoApp />
         <QuotesApp />

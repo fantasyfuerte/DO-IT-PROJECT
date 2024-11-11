@@ -14,7 +14,7 @@ const Nav: React.FC<Props> = ({ routes }) => {
       <h2 className="font-bold text-3xl inline-block p-3 text-amber-800 cursor-pointer">
         DO-IT-NOW
       </h2>
-      <div className="flex flex-row gap-5 pr-3">
+      <section className="flex flex-row gap-5 pr-3">
         {routes.map((route) => (
           <p
             key={`${route.title}${route.url}`}
@@ -23,7 +23,7 @@ const Nav: React.FC<Props> = ({ routes }) => {
             {route.title}
           </p>
         ))}
-      </div>
+      </section>
     </nav>
   );
 };

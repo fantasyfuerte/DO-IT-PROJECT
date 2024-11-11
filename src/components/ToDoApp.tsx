@@ -60,32 +60,30 @@ const ToDoApp: React.FC = () => {
   }, [toDoState]);
 
   return (
-    <>
-      <section className="xl:w-1/3 md:w-1/2 ml-14 p-2  rounded-md mt-12 min-h-24 h-fit shrink-0">
-        {toDoState.length < 5 && (
-          <div className="flex flex-col items-center w-full">
-            <input
-              type="text"
-              placeholder="Five most important things for today"
-              onChange={(e) => setTitle(e.target.value)}
-              onKeyDown={handleEnter}
-              value={title}
-              className="w-4/5 outline-none border-b-4 text-center text-lg font-medium mb-2"
-            />
-          </div>
+    <section className="xl:w-1/3 md:w-1/2 ml-14 p-2  rounded-md mt-12 min-h-24 h-fit shrink-0">
+      {toDoState.length < 5 && (
+        <div className="flex flex-col items-center w-full">
+          <input
+            type="text"
+            placeholder="Five most important things for today"
+            onChange={(e) => setTitle(e.target.value)}
+            onKeyDown={handleEnter}
+            value={title}
+            className="w-4/5 outline-none border-b-4 text-center text-lg font-medium mb-2"
+          />
+        </div>
+      )}
+      <ul className="">
+        {toDoState.length == 0 && (
+          <p className="text-center opacity-60 text-lg font-semibold">
+            No tasks
+          </p>
         )}
-        <ul className="">
-          {toDoState.length == 0 && (
-            <p className="text-center opacity-60 text-lg font-semibold">
-              No tasks
-            </p>
-          )}
-          {toDoState.map((todo) => (
-            <ToDoCard todo={todo} dispatch={dispatch} />
-          ))}
-        </ul>
-      </section>
-    </>
+        {toDoState.map((todo) => (
+          <ToDoCard todo={todo} dispatch={dispatch} />
+        ))}
+      </ul>
+    </section>
   );
 };
 

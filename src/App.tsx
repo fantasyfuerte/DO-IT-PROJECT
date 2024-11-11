@@ -1,13 +1,8 @@
 import Nav from "./components/Nav";
 import QuotesApp from "./components/QuotesApp";
 import ToDoApp from "./components/ToDoApp";
-import { type route } from "./types";
+import { routes } from "./constants";
 function App() {
-  const routes: route[] = [
-    { title: "How to use", url: "/", bold: true },
-    { title: "About us", url: "/" },
-  ];
-
   return (
     <>
       <Nav routes={routes} />

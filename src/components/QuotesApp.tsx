@@ -8,7 +8,7 @@ const QuotesApp: React.FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % Quotes.length);
-    }, 3500); // Cambia cada 1000 ms
+    }, 10000); // Cambia cada 1000 ms
     return () => clearInterval(intervalId); // Cleans up the interval on unmount
   }, [Quotes.length]);
 

@@ -19,3 +19,22 @@ body {
 .textshadow {
   text-shadow: 0 10px 15px #7e5514;
 }
+
+.animation{
+  animation: showUp 10s infinite;
+}
+
+@keyframes showUp{
+  0%{
+    opacity: 0;
+  }
+  15%{
+    opacity: 1;
+  }
+  85%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}

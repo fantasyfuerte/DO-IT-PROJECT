@@ -60,7 +60,7 @@ const ToDoApp: React.FC = () => {
   }, [toDoState]);
 
   return (
-    <section className="xl:w-1/3 md:w-1/2 ml-20 p-2  rounded-md mt-12 min-h-24 h-fit shrink-0">
+    <section className="w-full xl:w-1/3 md:w-1/2 md:ml-20 p-2  rounded-md mt-12 min-h-24 h-fit shrink-0">
       {toDoState.length < 5 && (
         <div className="flex flex-col items-center w-full">
           <input

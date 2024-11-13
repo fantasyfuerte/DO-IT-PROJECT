@@ -20,25 +20,27 @@ body {
   text-shadow: 0 10px 15px #7e5514;
 }
 
-.animation{
+.animation {
   animation: showUp 10s infinite;
 }
 
-@keyframes showUp{
-  0%{
+@keyframes showUp {
+  0% {
     opacity: 0;
   }
-  15%{
+  15% {
     opacity: 1;
   }
-  85%{
+  85% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-.height-80{
-  height: 84vh;
+@media (min-width: 768px) {
+  .height-80 {
+    height: 84vh;
+  }
 }

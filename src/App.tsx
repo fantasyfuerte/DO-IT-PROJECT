@@ -15,7 +15,9 @@ function App() {
           <QuotesApp />
         </div>
         <div className="hidden md:flex flex-col items-center mt-40">
-          <p className=""><strong>Scroll down</strong> or press <strong>space</strong></p>
+          <p>
+            <strong>Scroll down</strong> or press <strong>space</strong>
+          </p>
           <RiArrowDownWideFill size={50} />
         </div>
         <section className="height-80 flex flex-col md:flex-row mdjustify-around">

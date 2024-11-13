@@ -12,6 +12,10 @@ body {
   user-select: none;
 }
 
+.bg-nav{
+  background-color: rgb(255, 255, 229);
+}
+
 .decoration-line {
   text-decoration: line-through 3px solid #fff;
 }

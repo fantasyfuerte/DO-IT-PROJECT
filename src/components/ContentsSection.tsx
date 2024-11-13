@@ -5,19 +5,19 @@ const vitalAreas = [
     id: 1,
     title: "Health",
     route: "/health",
-    background: "bg-green-600",
+    background: "bg-green-950",
   },
   {
     id: 2,
     title: "Social",
     route: "/social",
-    background: "bg-red-600",
+    background: "bg-red-950",
   },
   {
     id: 3,
     title: "Thrive",
     route: "/thrive",
-    background: "bg-purple-600",
+    background: "bg-purple-950",
   },
 ];
 

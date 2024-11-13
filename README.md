@@ -7,7 +7,8 @@ Welcome to **DO-IT-NOW**, your ultimate productivity enhancement tool! This web 
 
 ## Features
 - **Task List**: Easily add, edit, and mark tasks as completed.
-- **Daily Inspiration**: Get motivated with quotes and tips
+- **Daily Inspiration**: Get motivated with motivational phrases.
+- **Key Life Areas**: Section with contents to improve on the life areas that really matters.
 
 ## Installation
 To get started with DO-IT-PROJECT,

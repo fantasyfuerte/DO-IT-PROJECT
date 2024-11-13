@@ -12,7 +12,11 @@ body {
   user-select: none;
 }
 
-.bg-nav{
+article > h2 {
+  font-family: Verdana, Geneva, Tahoma;
+}
+
+.bg-nav {
   background-color: rgb(255, 255, 229);
 }
 

@@ -23,9 +23,9 @@ const vitalAreas = [
 
 const ContentSection = () => {
   return (
-    <section className="height-80 flex flex-col md:flex-row mdjustify-around">
+    <section className="height-80 flex flex-col md:flex-row md:flex-wrap mdjustify-around">
       {vitalAreas.map((area) => (
-        <VitalAreaCard area={area} />
+        <VitalAreaCard key={area.id} area={area} />
       ))}
     </section>
   );

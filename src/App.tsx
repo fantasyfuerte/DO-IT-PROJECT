@@ -12,7 +12,7 @@ function App() {
         <Nav routes={routes} />
       </header>
       <main>
-        <div className="flex flex-col md:flex-row justify-between pt-24 items-center md:h-96">
+        <div className="flex flex-col md:flex-row justify-between items-center h-screen">
           <ToDoApp />
           <QuotesApp />
         </div>

@@ -3,11 +3,18 @@ import { Quotes } from "../constants";
 import { QuoteCard } from "./QuoteCard";
 
 const QuotesApp: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);// This is the element that will be shown
+  
+  function getRandomNumber(max: number): number {
+    return Math.floor(Math.random() * (max + 1)); // +1 para incluir el valor max
+  }
+
+  const [currentIndex, setCurrentIndex] = useState(
+    getRandomNumber(Quotes.length)
+  ); // This is the element that will be shown
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % Quotes.length);
+      setCurrentIndex(getRandomNumber(Quotes.length));
     }, 10000); // Cambia cada 1000 ms
     return () => clearInterval(intervalId); // Cleans up the interval on unmount
   }, [Quotes.length]);

@@ -69,7 +69,7 @@ const ToDoApp: React.FC = () => {
             onChange={(e) => setTitle(e.target.value)}
             onKeyDown={handleEnter}
             value={title}
-            className="w-4/5 outline-none border-b-4 text-center text-lg font-medium mb-2"
+            className="w-4/5 outline-none bg-transparent border-b-4 text-center text-lg font-medium mb-2"
           />
         </div>
       )}

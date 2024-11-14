@@ -9,12 +9,12 @@ const QuotesApp: React.FC = () => {
   }
 
   const [currentIndex, setCurrentIndex] = useState(
-    getRandomNumber(Quotes.length)
+    getRandomNumber(50)
   ); // This is the element that will be shown
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex(getRandomNumber(Quotes.length));
+      setCurrentIndex(getRandomNumber(50));
     }, 10000); // Cambia cada 1000 ms
     return () => clearInterval(intervalId); // Cleans up the interval on unmount
   }, [Quotes.length]);

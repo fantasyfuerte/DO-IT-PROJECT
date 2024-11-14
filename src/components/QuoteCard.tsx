@@ -6,7 +6,7 @@ interface Props {
 
 export const QuoteCard: React.FC<Props> = ({ quote }) => {
   return (
-    <article className="md:px-20 flex flex-col items-center animation">
+    <article className="md:px-20 flex flex-col items-center">
       <p className="textshadow text-3xl font-normal text-wrap text-center">
         "{quote.content}"
       </p>

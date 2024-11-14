@@ -3,14 +3,11 @@ import { Quotes } from "../constants";
 import { QuoteCard } from "./QuoteCard";
 
 const QuotesApp: React.FC = () => {
-
   function getRandomNumber(max: number): number {
-    return Math.floor(Math.random() * (max)); // +1 para incluir el valor max
+    return Math.floor(Math.random() * max); // +1 para incluir el valor max
   }
 
-  const [currentIndex, setCurrentIndex] = useState(
-    getRandomNumber(50)
-  ); // This is the element that will be shown
+  const [currentIndex, setCurrentIndex] = useState(getRandomNumber(50));
 
   useEffect(() => {
     const intervalId = setInterval(() => {

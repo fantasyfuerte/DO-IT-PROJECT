@@ -80,7 +80,7 @@ const ToDoApp: React.FC = () => {
           </p>
         )}
         {toDoState.map((todo) => (
-          <ToDoCard todo={todo} dispatch={dispatch} key={todo.id}/>
+          <ToDoCard todo={todo} dispatch={dispatch} key={todo.id} />
         ))}
       </ul>
     </section>

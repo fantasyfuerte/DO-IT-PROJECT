@@ -1,9 +1,10 @@
 import ContentSection from "./components/ContentsSection";
 import Nav from "./components/Nav";
 import QuotesApp from "./components/QuotesApp";
+import ScrollDownText from "./components/ScrollDownText";
 import ToDoApp from "./components/ToDoApp";
 import { routes } from "./constants";
-import { RiArrowDownWideFill } from "react-icons/ri";
+
 function App() {
   return (
     <>
@@ -15,12 +16,7 @@ function App() {
           <ToDoApp />
           <QuotesApp />
         </div>
-        <div className="hidden md:flex flex-col items-center mt-40">
-          <p>
-            <strong>Scroll down</strong> or press <strong>space</strong>
-          </p>
-          <RiArrowDownWideFill size={50} />
-        </div>
+        <ScrollDownText/>
         <ContentSection />
       </main>
     </>

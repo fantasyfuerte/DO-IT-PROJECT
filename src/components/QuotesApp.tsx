@@ -3,9 +3,9 @@ import { Quotes } from "../constants";
 import { QuoteCard } from "./QuoteCard";
 
 const QuotesApp: React.FC = () => {
-  
+
   function getRandomNumber(max: number): number {
-    return Math.floor(Math.random() * (max + 1)); // +1 para incluir el valor max
+    return Math.floor(Math.random() * (max)); // +1 para incluir el valor max
   }
 
   const [currentIndex, setCurrentIndex] = useState(

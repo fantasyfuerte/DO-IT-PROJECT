@@ -21,13 +21,13 @@ const ToDoCard: React.FC<Props> = ({ todo, dispatch }) => {
         dispatch({ type: DispatchType.COMPLETE, payload: { id: todo.id } })
       }
     >
-      {todo.completed ? (
-        <RiCheckboxFill size={20} color="#fff" />
+      {todo.completed  ? (
+        <RiCheckboxFill size={20} color="#fff" className="hidden md:inline"/>
       ) : (
         <RiCheckboxBlankLine
           size={20}
           color="#fff"
-          className="hover:scale-110 transition-transform"
+          className="hover:scale-110 transition-transform hidden md:inline"
         />
       )}
       <p className="text-lg text-white font-semibold">{todo.title}</p>

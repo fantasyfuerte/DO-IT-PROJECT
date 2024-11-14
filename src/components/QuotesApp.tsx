@@ -17,7 +17,7 @@ const QuotesApp: React.FC = () => {
   }, []);
 
   return (
-    <section className="md:ml-6 inline-block w-full p-6 ">
+    <section className="md:ml-6 inline-block p-6 basis-3/5">
       <QuoteCard quote={Quotes[currentIndex]} />
     </section>
   );

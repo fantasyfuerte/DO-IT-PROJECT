@@ -16,6 +16,12 @@ const initialState: ToDo[] = initial ?? [
   },
 ];
 
+enum filters {
+  ALL = "add",
+  ACTIVE = "active",
+  COMPLETED = "completed",
+}
+
 const ToDoApp: React.FC = () => {
   function reduce(todos: ToDo[], action: ActionDispatch): ToDo[] {
     switch (action.type) {
@@ -43,6 +49,8 @@ const ToDoApp: React.FC = () => {
 
   const [toDoState, dispatch] = useReducer(reduce, initialState);
   const [title, setTitle] = useState("");
+  const [filteredTodos, setFilteredTodos] = useState(toDoState);
+  const [filter, setFilter] = useState(filters.ALL);
 
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key !== "Enter" || title.length == 0 || title.trim() == "") return;
@@ -54,6 +62,14 @@ const ToDoApp: React.FC = () => {
   };
 
   useEffect(() => {
+    const actives = toDoState.filter((todo) => todo.completed == false);
+    if (filter == filters.ACTIVE) setFilteredTodos(actives);
+    else if (filter == filters.COMPLETED)
+      setFilteredTodos(toDoState.filter((todo) => !actives.includes(todo)));
+    else setFilteredTodos(toDoState);
+  }, [filter,toDoState]);
+
+  useEffect(() => {
     if (toDoState.length > 0)
       window.localStorage.setItem("data", JSON.stringify(toDoState));
     else window.localStorage.setItem("data", "");
@@ -61,7 +77,7 @@ const ToDoApp: React.FC = () => {
 
   return (
     <section className="md:ml-20 p-2  rounded-md h-fit md:basis-2/5">
-      {toDoState.length < 5 && (
+      {toDoState.length < 5 && filter == filters.ALL && (
         <div className="flex flex-col items-center w-full">
           <input
             type="text"
@@ -74,15 +90,38 @@ const ToDoApp: React.FC = () => {
         </div>
       )}
       <ul className="">
-        {toDoState.length == 0 && (
+        {filteredTodos.length == 0 && (
           <p className="text-center opacity-60 text-lg font-semibold">
             No tasks
           </p>
         )}
-        {toDoState.map((todo) => (
+        {filteredTodos.map((todo) => (
           <ToDoCard todo={todo} dispatch={dispatch} key={todo.id} />
         ))}
       </ul>
+      <div className="flex justify-around">
+        <button
+          onClick={() => {
+            setFilter(filters.ALL);
+          }}
+        >
+          All
+        </button>
+        <button
+          onClick={() => {
+            setFilter(filters.ACTIVE);
+          }}
+        >
+          Active
+        </button>
+        <button
+          onClick={() => {
+            setFilter(filters.COMPLETED);
+          }}
+        >
+          Completed
+        </button>
+      </div>
     </section>
   );
 };

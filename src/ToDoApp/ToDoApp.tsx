@@ -1,6 +1,7 @@
 import { ActionDispatch, DispatchType, type ToDo } from "@/types.d";
 import { useEffect, useReducer, useState } from "react";
 import ToDoCard from "./components/ToDoCard";
+import NewTaskForm from "./components/NewTaskForm";
 
 let initial;
 const data = window.localStorage.getItem("data");
@@ -16,7 +17,7 @@ const initialState: ToDo[] = initial ?? [
   },
 ];
 
-enum filters {
+export enum filters {
   ALL = "add",
   ACTIVE = "active",
   COMPLETED = "completed",
@@ -47,18 +48,8 @@ const ToDoApp: React.FC = () => {
   }
 
   const [toDoState, dispatch] = useReducer(reduce, initialState);
-  const [title, setTitle] = useState("");
   const [filteredTodos, setFilteredTodos] = useState(toDoState);
   const [filter, setFilter] = useState(filters.ALL);
-
-  const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key !== "Enter" || title.length == 0 || title.trim() == "") return;
-    dispatch({
-      type: DispatchType.ADD,
-      payload: { title, id: crypto.randomUUID() },
-    });
-    setTitle("");
-  };
 
   useEffect(() => {
     const actives = toDoState.filter((todo) => todo.completed == false);
@@ -77,21 +68,7 @@ const ToDoApp: React.FC = () => {
   return (
     <section className="md:ml-20 p-2  rounded-md h-fit md:basis-2/5">
       {toDoState.length < 5 && (
-        <div
-          className={`transition duration-300 flex flex-col items-center w-full ${
-            filter !== filters.ALL && "opacity-15"
-          } `}
-        >
-          <input
-            type="text"
-            placeholder="Five most important things for today"
-            onChange={(e) => setTitle(e.target.value)}
-            onKeyDown={handleEnter}
-            value={title}
-            className="w-4/5 outline-none bg-transparent border-b-4 text-center text-lg font-medium mb-2"
-            disabled={filter !== filters.ALL ? true : false}
-          />
-        </div>
+        <NewTaskForm filter={filter} dispatch={dispatch} />
       )}
       <ul className="">
         {filteredTodos.length == 0 && (

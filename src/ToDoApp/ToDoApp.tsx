@@ -1,8 +1,9 @@
-import { ActionDispatch, DispatchType, type ToDo } from "@/types.d";
+import { type ToDo } from "@/types.d";
 import { useEffect, useReducer, useState } from "react";
 import ToDoCard from "./components/ToDoCard";
 import NewTaskForm from "./components/NewTaskForm";
 import { getData, saveData } from "@/services";
+import { reduce } from "@/services";
 
 const initialState: ToDo[] = getData("data") ?? [
   {
@@ -19,29 +20,6 @@ export enum filters {
 }
 
 const ToDoApp: React.FC = () => {
-  function reduce(todos: ToDo[], action: ActionDispatch): ToDo[] {
-    switch (action.type) {
-      case DispatchType.ADD:
-        if (!action.payload.title) return todos;
-        return [
-          ...todos,
-          {
-            title: action.payload.title,
-            id: action.payload.id,
-            completed: false,
-          },
-        ];
-      case DispatchType.DELETE:
-        return todos.filter((todo) => todo.id !== action.payload.id);
-      case DispatchType.COMPLETE:
-        return todos.map((todo) => {
-          if (todo.id == action.payload.id)
-            return { ...todo, completed: !todo.completed };
-          return todo;
-        });
-    }
-  }
-
   const [toDoState, dispatch] = useReducer(reduce, initialState);
   const [filteredTodos, setFilteredTodos] = useState(toDoState);
   const [filter, setFilter] = useState(filters.ALL);

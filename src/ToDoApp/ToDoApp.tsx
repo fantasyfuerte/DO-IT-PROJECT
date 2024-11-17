@@ -38,7 +38,7 @@ const ToDoApp: React.FC = () => {
   }, [toDoState]);
 
   return (
-    <section className="md:ml-20 p-2  rounded-md h-fit md:basis-2/5">
+    <section className="md:ml-20 p-2 min-w-96 rounded-md h-fit md:basis-2/5">
       {toDoState.length < 5 && (
         <NewTaskForm filter={filter} dispatch={dispatch} />
       )}

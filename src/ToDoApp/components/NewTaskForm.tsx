@@ -44,7 +44,7 @@ const NewTaskForm: React.FC<Props> = ({ dispatch, filter }) => {
         disabled={filter !== filters.ALL ? true : false}
       />
       <button
-        className="inline-block md:hidden text-white bg-gray-900 rounded-full ml-4"
+        className="inline-block md:hidden p-1 text-white bg-gray-900 rounded-full ml-1 mb-2"
         onClick={handlePress}
       >
        <PlusIcon/>

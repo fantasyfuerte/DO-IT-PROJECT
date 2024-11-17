@@ -1,6 +1,7 @@
 import { DispatchType, ActionDispatch } from "@/types.d";
 import { filters } from "../ToDoApp";
 import { useState } from "react";
+import { PlusIcon } from "lucide-react";
 
 interface Props {
   dispatch: ({}: ActionDispatch) => void;
@@ -39,14 +40,14 @@ const NewTaskForm: React.FC<Props> = ({ dispatch, filter }) => {
         onChange={(e) => setTitle(e.target.value)}
         onKeyDown={handleEnter}
         value={title}
-        className="min-w-72 md:w-4/5 outline-none bg-transparent border-b-4 text-center text-lg font-medium mb-2"
+        className="min-w-80 md:w-4/5 outline-none bg-transparent border-b-4 text-center text-lg font-medium mb-2 shrink-0"
         disabled={filter !== filters.ALL ? true : false}
       />
       <button
-        className="inline-block md:hidden px-2 py-1 text-white bg-gray-900 rounded-md ml-4"
+        className="inline-block md:hidden   text-white bg-gray-900 rounded-full -4 mb-2 p-1"
         onClick={handlePress}
       >
-        Add
+        <PlusIcon />
       </button>
     </div>
   );

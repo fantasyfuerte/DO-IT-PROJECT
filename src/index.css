@@ -8,16 +8,11 @@
   }
 }
 body {
-  background-color: rgb(255, 255, 229);
   user-select: none;
 }
 
 article > h2 {
   font-family: Verdana, Geneva, Tahoma;
-}
-
-.bg-nav {
-  background-color: rgb(255, 255, 229);
 }
 
 .decoration-line {

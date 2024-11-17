@@ -10,7 +10,7 @@ const navItemBoldStyle =
 
 const Nav: React.FC<Props> = ({ routes }) => {
   return (
-    <nav className="bg-nav md:bg-transparent flex fixed w-full top-0 justify-center md:justify-between items-center">
+    <nav className="md:bg-transparent flex fixed w-full top-0 justify-center md:justify-between items-center">
       <h2 className="font-bold text-3xl inline-block p-3 text-black cursor-pointer">
         DO-IT-NOW
       </h2>

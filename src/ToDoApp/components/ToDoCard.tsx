@@ -14,15 +14,15 @@ const ToDoCard: React.FC<Props> = ({ todo, dispatch }) => {
   return (
     <li
       key={todo.id}
-      className={`flex items-center gap-3 bg-gray-950 w-full justify-between px-3 py-1 rounded-md my-2 cursor-pointer ${
+      className={`flex items-center gap-3 bg-gray-950 w-full justify-between px-3 py-1 rounded-md my-2 cursor-pointer${
         todo.completed && "opacity-50 decoration-line"
       }`}
       onClick={() =>
         dispatch({ type: DispatchType.COMPLETE, payload: { id: todo.id } })
       }
     >
-      {todo.completed  ? (
-        <RiCheckboxFill size={20} color="#fff" className="hidden md:inline"/>
+      {todo.completed ? (
+        <RiCheckboxFill size={20} color="#fff" className="hidden md:inline" />
       ) : (
         <RiCheckboxBlankLine
           size={20}

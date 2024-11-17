@@ -1,4 +1,4 @@
-import VitalAreaCard from "@/components/VitalAreaCard";
+import VitalAreaCard from "@/ContentsSection/VitalAreaCard";
 
 const vitalAreas = [
   {

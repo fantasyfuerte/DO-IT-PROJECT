@@ -1,6 +1,6 @@
 import { ActionDispatch, DispatchType, type ToDo } from "@/types.d";
 import { useEffect, useReducer, useState } from "react";
-import ToDoCard from "./ToDoCard";
+import ToDoCard from "./components/ToDoCard";
 
 let initial;
 const data = window.localStorage.getItem("data");
@@ -44,7 +44,6 @@ const ToDoApp: React.FC = () => {
           return todo;
         });
     }
-    return todos;
   }
 
   const [toDoState, dispatch] = useReducer(reduce, initialState);
@@ -63,10 +62,9 @@ const ToDoApp: React.FC = () => {
 
   useEffect(() => {
     const actives = toDoState.filter((todo) => todo.completed == false);
-    const completed = toDoState.filter((todo) => !actives.includes(todo))
+    const completed = toDoState.filter((todo) => !actives.includes(todo));
     if (filter == filters.ACTIVE) setFilteredTodos(actives);
-    else if (filter == filters.COMPLETED)
-      setFilteredTodos(completed);
+    else if (filter == filters.COMPLETED) setFilteredTodos(completed);
     else setFilteredTodos(toDoState);
   }, [filter, toDoState]);
 
@@ -79,7 +77,11 @@ const ToDoApp: React.FC = () => {
   return (
     <section className="md:ml-20 p-2  rounded-md h-fit md:basis-2/5">
       {toDoState.length < 5 && (
-        <div className={`transition duration-300 flex flex-col items-center w-full ${filter !== filters.ALL && "opacity-15"} `}>
+        <div
+          className={`transition duration-300 flex flex-col items-center w-full ${
+            filter !== filters.ALL && "opacity-15"
+          } `}
+        >
           <input
             type="text"
             placeholder="Five most important things for today"
@@ -87,7 +89,7 @@ const ToDoApp: React.FC = () => {
             onKeyDown={handleEnter}
             value={title}
             className="w-4/5 outline-none bg-transparent border-b-4 text-center text-lg font-medium mb-2"
-            disabled={filter !== filters.ALL?true:false}
+            disabled={filter !== filters.ALL ? true : false}
           />
         </div>
       )}
@@ -118,14 +120,16 @@ const ToDoApp: React.FC = () => {
         >
           Active
         </button>
-        {toDoState.filter((todo) => todo.completed).length>0&&<button
-          className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1"
-          onClick={() => {
-            setFilter(filters.COMPLETED);
-          }}
-        >
-          Completed
-        </button>}
+        {toDoState.filter((todo) => todo.completed).length > 0 && (
+          <button
+            className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1"
+            onClick={() => {
+              setFilter(filters.COMPLETED);
+            }}
+          >
+            Completed
+          </button>
+        )}
       </div>
     </section>
   );

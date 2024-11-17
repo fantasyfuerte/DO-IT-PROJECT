@@ -1,8 +1,8 @@
-import ContentSection from "./components/ContentsSection";
+import ContentSection from "./ContentsSection/ContentsSection";
 import Nav from "./components/Nav";
-import QuotesApp from "./components/QuotesApp";
+import QuotesApp from "./QuotesApp/QuotesApp";
 import ScrollDownText from "./components/ScrollDownText";
-import ToDoApp from "./components/ToDoApp";
+import ToDoApp from "./ToDoApp/ToDoApp";
 import { routes } from "./constants";
 
 function App() {

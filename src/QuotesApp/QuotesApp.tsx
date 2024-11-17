@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Quotes } from "../constants";
-import { QuoteCard } from "./QuoteCard";
+import { QuoteCard } from "./components/QuoteCard";
 
 const QuotesApp: React.FC = () => {
   function getRandomNumber(max: number): number {

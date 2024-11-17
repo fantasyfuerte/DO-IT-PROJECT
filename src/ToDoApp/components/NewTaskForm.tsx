@@ -40,14 +40,14 @@ const NewTaskForm: React.FC<Props> = ({ dispatch, filter }) => {
         onChange={(e) => setTitle(e.target.value)}
         onKeyDown={handleEnter}
         value={title}
-        className="min-w-[300px] md:w-4/5 outline-none bg-transparent border-b-4 text-center text-lg font-medium mb-2 shrink-0"
+        className="min-w-[300px] md:w-4/5 outline-none bg-transparent border-b-4 border-gray-300 text-center text-lg font-medium mb-2 shrink-0"
         disabled={filter !== filters.ALL ? true : false}
       />
       <button
         className="inline-block md:hidden p-1 text-white bg-gray-900 rounded-full ml-1 mb-2"
         onClick={handlePress}
       >
-       <PlusIcon/>
+        <PlusIcon />
       </button>
     </div>
   );

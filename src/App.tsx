@@ -16,7 +16,7 @@ function App() {
           <ToDoApp />
           <QuotesApp />
         </div>
-        <ScrollDownText/>
+        <ScrollDownText />
         <ContentSection />
       </main>
     </>

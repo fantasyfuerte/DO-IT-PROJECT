@@ -7,11 +7,11 @@ export const getData = (key: string) => {
   return initial;
 };
 
-export const saveData = (content: string, key: string) => {
+export const saveData = (key: string, content: string) => {
   window.localStorage.setItem(key, content);
 };
 
-import {DispatchType,ActionDispatch,ToDo} from '@/types.d'
+import { DispatchType, ActionDispatch, ToDo } from "@/types.d";
 
 export function reduce(todos: ToDo[], action: ActionDispatch): ToDo[] {
   switch (action.type) {

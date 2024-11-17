@@ -5,7 +5,9 @@ import NewTaskForm from "./components/NewTaskForm";
 import { getData, saveData } from "@/services";
 import { reduce } from "@/services";
 
-const initialState: ToDo[] = getData("data") ?? [
+const initial = getData("data");
+
+const initialState: ToDo[] = initial ?? [
   {
     title: "Write your task an make it check",
     id: "init-init-init-init",

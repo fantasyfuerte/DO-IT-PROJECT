@@ -2,14 +2,9 @@ import { ActionDispatch, DispatchType, type ToDo } from "@/types.d";
 import { useEffect, useReducer, useState } from "react";
 import ToDoCard from "./components/ToDoCard";
 import NewTaskForm from "./components/NewTaskForm";
+import { getData, saveData } from "@/services";
 
-let initial;
-const data = window.localStorage.getItem("data");
-if (data) {
-  initial = JSON.parse(data);
-}
-
-const initialState: ToDo[] = initial ?? [
+const initialState: ToDo[] = getData("data") ?? [
   {
     title: "Write your task an make it check",
     id: "init-init-init-init",
@@ -60,9 +55,8 @@ const ToDoApp: React.FC = () => {
   }, [filter, toDoState]);
 
   useEffect(() => {
-    if (toDoState.length > 0)
-      window.localStorage.setItem("data", JSON.stringify(toDoState));
-    else window.localStorage.setItem("data", "");
+    if (toDoState.length > 0) saveData("data", JSON.stringify(toDoState));
+    else saveData("data", "");
   }, [toDoState]);
 
   return (

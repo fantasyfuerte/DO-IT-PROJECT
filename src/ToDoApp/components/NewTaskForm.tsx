@@ -40,7 +40,7 @@ const NewTaskForm: React.FC<Props> = ({ dispatch, filter }) => {
         onChange={(e) => setTitle(e.target.value)}
         onKeyDown={handleEnter}
         value={title}
-        className="min-w-80 md:w-4/5 outline-none bg-transparent border-b-4 text-center text-lg font-medium mb-2 shrink-0"
+        className="min-w-[300px] md:w-4/5 outline-none bg-transparent border-b-4 text-center text-lg font-medium mb-2 shrink-0"
         disabled={filter !== filters.ALL ? true : false}
       />
       <button

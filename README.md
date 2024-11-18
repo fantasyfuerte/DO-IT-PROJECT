@@ -3,16 +3,14 @@
 ## Introduction
 Welcome to **DO-IT-NOW**, your ultimate productivity enhancement tool! This web application is designed to help you achieve  your daily goals effortlessly and stay organized throughout your day.
 
+
 ## Features
-- **Task List**: Easily add, edit, and mark tasks as completed.
-- **Daily Inspiration**: Get motivated with motivational phrases.
+- **Task List**: Easily add, edit, and mark tasks as completed. Also you can filter task by completed or active.
+- **Daily Inspiration**: Get motivated with motivational phrases of the greatest of all time.
 - **Key Life Areas**: Section with contents to improve on the life areas that really matters.
 
-[![image](screenshots/app-screenshot.png)]
-[![image](screenshots/app-screenshot-2.png)]
-
 ## Installation
-To get started with DO-IT-PROJECT,
+To get started with DO-IT-PROJECT:
 
 1. **Clone the repository**
 

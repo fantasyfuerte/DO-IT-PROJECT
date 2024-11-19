@@ -1,7 +1,14 @@
 import Nav from "./components/Nav";
 import { routes } from "./constants";
 import { HomePage } from "./pages/HomePage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+const router = createBrowserRouter([
+  {
+    path: "/Home",
+    element: <HomePage />,
+  },
+]);
 
 function App() {
   return (
@@ -10,7 +17,7 @@ function App() {
         <Nav routes={routes} />
       </header>
       <main>
-        <HomePage></HomePage>
+        <RouterProvider router={router} />
       </main>
     </>
   );

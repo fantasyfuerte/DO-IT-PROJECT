@@ -4,7 +4,7 @@ import ToDoCard from "./components/ToDoCard";
 import NewTaskForm from "./components/NewTaskForm";
 import { getData, saveData } from "@/services";
 import { reduce } from "@/services";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 
 const initial = getData("data");
 

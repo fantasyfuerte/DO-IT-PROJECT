@@ -4,6 +4,7 @@ import ToDoCard from "./components/ToDoCard";
 import NewTaskForm from "./components/NewTaskForm";
 import { getData, saveData } from "@/services";
 import { reduce } from "@/services";
+import { motion } from "motion/react";
 
 const initial = getData("data");
 
@@ -50,27 +51,33 @@ const ToDoApp: React.FC = () => {
             No tasks
           </p>
         )}
-        {filteredTodos.map((todo) => (
-          <ToDoCard todo={todo} dispatch={dispatch} key={todo.id} />
+        {filteredTodos.map((todo, index) => (
+          <ToDoCard todo={todo} dispatch={dispatch} key={todo.id} i={index} />
         ))}
       </ul>
       <div className="flex justify-around">
-        <button
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
           className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1"
           onClick={() => {
             setFilter(filters.ALL);
           }}
         >
           All
-        </button>
-        <button
+        </motion.button>
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
           className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1"
           onClick={() => {
             setFilter(filters.ACTIVE);
           }}
         >
           Active
-        </button>
+        </motion.button>
         {toDoState.filter((todo) => todo.completed).length > 0 && (
           <button
             className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1"

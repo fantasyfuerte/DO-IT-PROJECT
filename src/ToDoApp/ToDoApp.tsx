@@ -4,7 +4,7 @@ import ToDoCard from "./components/ToDoCard";
 import NewTaskForm from "./components/NewTaskForm";
 import { getData, saveData } from "@/services";
 import { reduce } from "@/services";
-import { motion } from "motion/react";
+import { motion} from "motion/react";
 
 const initial = getData("data");
 
@@ -41,7 +41,7 @@ const ToDoApp: React.FC = () => {
   }, [toDoState]);
 
   return (
-    <section className="md:ml-20 p-2 rounded-md h-fit md:basis-2/5">
+    <motion.section layout className="md:ml-20 p-2 rounded-md h-fit md:basis-2/5">
       {toDoState.length < 5 && (
         <NewTaskForm filter={filter} dispatch={dispatch} />
       )}
@@ -89,7 +89,7 @@ const ToDoApp: React.FC = () => {
           </button>
         )}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

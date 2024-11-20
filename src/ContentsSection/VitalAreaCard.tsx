@@ -13,7 +13,7 @@ const VitalAreaCard: React.FC<Props> = ({ area }) => {
   return (
     <motion.article
       initial={{ opacity: 0 }}
-      transition={{ delay: (area.id*2)/10,duration:0.5 }}
+      transition={{ delay: (area.id * 2) / 10, duration: 0.5 }}
       whileInView={{ opacity: 1 }}
       className={`${area.background} h-44 md:h-96 flex-grow m-5 rounded-lg flex justify-center items-center`}
     >

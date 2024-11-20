@@ -18,8 +18,8 @@ const ToDoCard: React.FC<Props> = ({ todo, dispatch, i }) => {
 
   return (
     <motion.li
-      initial={{scale:0,opacity:0}}
-      animate={{scale:1,opacity:1}}
+      initial={{scale:0}}
+      animate={{scale:1}}
       transition={{delay,}}
       key={todo.id}
       className={`flex items-center gap-3 bg-gray-950 w-full justify-between px-3 py-1 rounded-lg md:rounded-sm my-1 cursor-pointer ${

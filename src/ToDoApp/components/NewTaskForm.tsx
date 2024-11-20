@@ -2,6 +2,7 @@ import { DispatchType, ActionDispatch } from "@/types.d";
 import { filters } from "../ToDoApp";
 import { useState } from "react";
 import { PlusIcon } from "lucide-react";
+import { motion } from "motion/react";
 
 interface Props {
   dispatch: ({}: ActionDispatch) => void;
@@ -35,7 +36,9 @@ const NewTaskForm: React.FC<Props> = ({ dispatch, filter }) => {
         filter !== filters.ALL && "opacity-15"
       } `}
     >
-      <input
+      <motion.input
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         type="text"
         placeholder="Five most important things for today"
         onChange={(e) => setTitle(e.target.value)}

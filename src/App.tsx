@@ -2,16 +2,13 @@ import Nav from "./components/Nav";
 import { routes } from "./constants";
 import { HomePage } from "./pages/HomePage";
 import {
-  createBrowserRouter,
-  RouterProvider,
+  Routes,
+  Route,
+  BrowserRouter,
+  Navigate
 } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomePage />,
-  },
-]);
+
 
 function App() {
   return (
@@ -20,7 +17,12 @@ function App() {
         <Nav routes={routes} />
       </header>
       <main>
-        <RouterProvider router={router} />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/home" element={<HomePage/>} />
+            <Route path="/" element={<Navigate to={"/home"} />} />
+          </Routes>
+        </BrowserRouter>
       </main>
     </>
   );

@@ -21,6 +21,7 @@ const NewTaskForm: React.FC<Props> = ({ dispatch, filter }) => {
   };
 
   const handlePress = () => {
+    if (title.length == 0 || title.trim() == "") return;
     dispatch({
       type: DispatchType.ADD,
       payload: { title, id: crypto.randomUUID() },

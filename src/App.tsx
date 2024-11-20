@@ -1,13 +1,17 @@
 import Nav from "./components/Nav";
 import { routes } from "./constants";
 import { HomePage } from "./pages/HomePage";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider,Navigate } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "/Home",
+    path: "/home",
     element: <HomePage />,
   },
+  {
+    path: "/",
+    element: <Navigate to={"/home"} />
+  }
 ]);
 
 function App() {

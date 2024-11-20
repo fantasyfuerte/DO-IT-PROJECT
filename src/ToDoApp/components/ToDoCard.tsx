@@ -4,7 +4,7 @@ import {
   RiCheckboxBlankLine,
   RiDeleteBack2Fill,
 } from "react-icons/ri";
-import {motion} from 'motion/react'
+import { motion } from "motion/react";
 
 interface Props {
   todo: ToDo;
@@ -13,14 +13,13 @@ interface Props {
 }
 
 const ToDoCard: React.FC<Props> = ({ todo, dispatch, i }) => {
-
-  const delay = (i+1.5)/10
+  const delay = (i + 1.5) / 10;
 
   return (
     <motion.li
-      initial={{scale:0}}
-      animate={{scale:1}}
-      transition={{delay,}}
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ delay }}
       key={todo.id}
       className={`flex items-center gap-3 bg-gray-950 w-full justify-between px-3 py-1 rounded-lg md:rounded-sm my-1 cursor-pointer ${
         todo.completed && "opacity-50 decoration-line"

@@ -3,6 +3,7 @@ import ContentSection from "@/ContentsSection/ContentsSection";
 import QuotesApp from "@/QuotesApp/QuotesApp";
 import ToDoApp from "@/ToDoApp/ToDoApp";
 
+
 export const HomePage: React.FC = () => {
   return (
     <>

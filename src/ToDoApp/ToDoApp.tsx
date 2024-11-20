@@ -4,7 +4,7 @@ import ToDoCard from "./components/ToDoCard";
 import NewTaskForm from "./components/NewTaskForm";
 import { getData, saveData } from "@/services";
 import { reduce } from "@/services";
-import { motion} from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 const initial = getData("data");
 
@@ -41,11 +41,14 @@ const ToDoApp: React.FC = () => {
   }, [toDoState]);
 
   return (
-    <motion.section layout className="md:ml-20 p-2 rounded-md h-fit md:basis-2/5">
+    <motion.section
+      layout
+      className="md:ml-20 p-2 rounded-md h-fit md:basis-2/5"
+    >
       {toDoState.length < 5 && (
         <NewTaskForm filter={filter} dispatch={dispatch} />
       )}
-      <ul className="">
+      <ul>
         {filteredTodos.length == 0 && (
           <p className="text-center opacity-60 text-lg font-semibold">
             No tasks
@@ -55,12 +58,12 @@ const ToDoApp: React.FC = () => {
           <ToDoCard todo={todo} dispatch={dispatch} key={todo.id} i={index} />
         ))}
       </ul>
-      <motion.div layout className="flex justify-around">
+      <motion.div className="flex justify-around">
         <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1"
+          className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1 px-2"
           onClick={() => {
             setFilter(filters.ALL);
           }}
@@ -71,7 +74,7 @@ const ToDoApp: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1"
+          className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1 px-2"
           onClick={() => {
             setFilter(filters.ACTIVE);
           }}
@@ -80,10 +83,10 @@ const ToDoApp: React.FC = () => {
         </motion.button>
         {toDoState.filter((todo) => todo.completed).length > 0 && (
           <motion.button
-          initial={{scale:0}}
-          animate={{scale:1}}
-          transition={{delay:.5}}
-            className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.5 }}
+            className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1 px-2"
             onClick={() => {
               setFilter(filters.COMPLETED);
             }}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Quotes } from "../constants";
 import { QuoteCard } from "./components/QuoteCard";
+import {motion} from 'motion/react'
 
 const QuotesApp: React.FC = () => {
   function getRandomNumber(max: number): number {
@@ -17,9 +18,9 @@ const QuotesApp: React.FC = () => {
   }, []);
 
   return (
-    <section className="mt-20 md:mt-0 md:ml-6 inline-block p-6 basis-3/5">
+    <motion.section initial={{opacity:0}} animate={{opacity:1}} transition={{delay:1.8}} className="mt-20 md:mt-0 md:ml-6 inline-block p-6 basis-3/5">
       <QuoteCard quote={Quotes[currentIndex]} />
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,5 +1,4 @@
 import VitalAreaCard from "@/ContentsSection/VitalAreaCard";
-import {motion} from 'motion/react'
 
 const vitalAreas = [
   {
@@ -24,11 +23,11 @@ const vitalAreas = [
 
 const ContentSection = () => {
   return (
-    <motion.section initial={{opacity:0}} transition={{delay:.1}} whileInView={{opacity:1}} className="h-[84vh] mt-1 flex flex-col md:flex-row md:flex-wrap">
+    <section className="h-[84vh] flex flex-col md:flex-row md:flex-wrap">
       {vitalAreas.map((area) => (
         <VitalAreaCard key={area.id} area={area} />
       ))}
-    </motion.section>
+    </section>
   );
 };
 export default ContentSection;

@@ -55,7 +55,7 @@ const ToDoApp: React.FC = () => {
           <ToDoCard todo={todo} dispatch={dispatch} key={todo.id} i={index} />
         ))}
       </ul>
-      <div className="flex justify-around">
+      <motion.div layout className="flex justify-around">
         <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -79,16 +79,19 @@ const ToDoApp: React.FC = () => {
           Active
         </motion.button>
         {toDoState.filter((todo) => todo.completed).length > 0 && (
-          <button
+          <motion.button
+          initial={{scale:0}}
+          animate={{scale:1}}
+          transition={{delay:.5}}
             className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1"
             onClick={() => {
               setFilter(filters.COMPLETED);
             }}
           >
             Completed
-          </button>
+          </motion.button>
         )}
-      </div>
+      </motion.div>
     </motion.section>
   );
 };

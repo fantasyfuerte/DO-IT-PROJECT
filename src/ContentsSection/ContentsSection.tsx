@@ -23,7 +23,7 @@ const vitalAreas = [
 
 const ContentSection = () => {
   return (
-    <section className="h-[84vh] flex flex-col md:flex-row md:flex-wrap">
+    <section className="h-[87vh] flex flex-col md:flex-row md:flex-wrap">
       {vitalAreas.map((area) => (
         <VitalAreaCard key={area.id} area={area} />
       ))}

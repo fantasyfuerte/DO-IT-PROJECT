@@ -16,7 +16,7 @@ export const HomePage: React.FC = () => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        className="px-4 h-screen"
+        className="p-6 pt-12 h-screen"
       >
         <h2 className="text-5xl text-center font-semibold my-3">
           Why this 3 areas

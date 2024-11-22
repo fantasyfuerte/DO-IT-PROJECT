@@ -49,14 +49,15 @@ const ToDoApp: React.FC = () => {
         <NewTaskForm filter={filter} dispatch={dispatch} />
       )}
       <Reorder.Group
+        dragConstraints={{}}
         axis="y"
         values={toDoState}
-        onReorder={(e) =>
+        onReorder={(value) => {
           dispatch({
             type: DispatchType.SET,
-            payload: { todos: e, id: "a-a-a-a" },
-          })
-        }
+            payload: { todos: value, id: "a-a-a-a" },
+          });
+        }}
       >
         {filteredTodos.length == 0 && (
           <p className="text-center opacity-60 text-lg font-semibold">

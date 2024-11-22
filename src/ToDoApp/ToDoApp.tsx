@@ -1,4 +1,4 @@
-import { type ToDo } from "@/types.d";
+import { DispatchType, type ToDo } from "@/types.d";
 import { useEffect, useReducer, useState } from "react";
 import ToDoCard from "./components/ToDoCard";
 import NewTaskForm from "./components/NewTaskForm";
@@ -50,8 +50,13 @@ const ToDoApp: React.FC = () => {
       )}
       <Reorder.Group
         axis="y"
-        values={filteredTodos}
-        onReorder={setFilteredTodos}
+        values={toDoState}
+        onReorder={(e) =>
+          dispatch({
+            type: DispatchType.SET,
+            payload: { todos: e, id: "a-a-a-a" },
+          })
+        }
       >
         {filteredTodos.length == 0 && (
           <p className="text-center opacity-60 text-lg font-semibold">

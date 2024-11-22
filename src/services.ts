@@ -34,7 +34,7 @@ export function reduce(todos: ToDo[], action: ActionDispatch): ToDo[] {
         return todo;
       });
     case DispatchType.SET:
-      return todos
+      if (action.payload.todos) return action.payload.todos;
   }
   return todos;
 }

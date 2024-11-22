@@ -1,4 +1,4 @@
-import { DispatchType, type ToDo } from "@/types.d";
+import { type ToDo } from "@/types.d";
 import { useEffect, useReducer, useState } from "react";
 import ToDoCard from "./components/ToDoCard";
 import NewTaskForm from "./components/NewTaskForm";
@@ -59,9 +59,7 @@ const ToDoApp: React.FC = () => {
           </p>
         )}
         {filteredTodos.map((todo, index) => (
-          <Reorder.Item value={todo} key={todo.id}>
-            <ToDoCard todo={todo} dispatch={dispatch} key={todo.id} i={index} />
-          </Reorder.Item>
+          <ToDoCard todo={todo} dispatch={dispatch} key={todo.id} i={index} />
         ))}
       </Reorder.Group>
       <motion.div className="flex justify-around">

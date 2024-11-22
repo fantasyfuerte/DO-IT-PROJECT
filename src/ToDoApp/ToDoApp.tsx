@@ -1,5 +1,5 @@
 import { DispatchType, type ToDo } from "@/types.d";
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import ToDoCard from "./components/ToDoCard";
 import NewTaskForm from "./components/NewTaskForm";
 import { getData, saveData } from "@/services";
@@ -26,6 +26,7 @@ const ToDoApp: React.FC = () => {
   const [toDoState, dispatch] = useReducer(reduce, initialState);
   const [filteredTodos, setFilteredTodos] = useState(toDoState);
   const [filter, setFilter] = useState(filters.ALL);
+  const constraintsRef = useRef(null);
 
   useEffect(() => {
     const actives = toDoState.filter((todo) => todo.completed == false);
@@ -42,6 +43,7 @@ const ToDoApp: React.FC = () => {
 
   return (
     <motion.section
+      ref={constraintsRef}
       layout
       className="md:ml-20 p-2 rounded-md h-fit md:basis-2/5"
     >
@@ -65,7 +67,13 @@ const ToDoApp: React.FC = () => {
           </p>
         )}
         {filteredTodos.map((todo, index) => (
-          <ToDoCard todo={todo} dispatch={dispatch} key={todo.id} i={index} />
+          <ToDoCard
+            constraints={constraintsRef}
+            todo={todo}
+            dispatch={dispatch}
+            key={todo.id}
+            i={index}
+          />
         ))}
       </Reorder.Group>
       <motion.div className="flex justify-around">

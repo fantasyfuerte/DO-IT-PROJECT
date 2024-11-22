@@ -10,9 +10,10 @@ interface Props {
   todo: ToDo;
   dispatch: ({}: ActionDispatch) => void;
   i: number;
+  constraints: React.MutableRefObject<null>;
 }
 
-const ToDoCard: React.FC<Props> = ({ todo, dispatch, i }) => {
+const ToDoCard: React.FC<Props> = ({ todo, dispatch, i, constraints }) => {
   const delay = (i + 1.5) / 10;
 
   const HandleClick = () => {
@@ -21,11 +22,17 @@ const ToDoCard: React.FC<Props> = ({ todo, dispatch, i }) => {
 
   return (
     <Reorder.Item
+      dragConstraints={constraints}
       value={todo}
       key={todo.id}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ delay }}
+      whileDrag={{
+        scale: 1.1,
+        boxShadow: "0 0 10px #fff",
+        transition: { delay: 0 },
+      }}
       className={`flex items-center gap-3 bg-gray-950 w-full justify-between px-3 py-1 rounded-lg md:rounded-sm my-1 cursor-pointer ${
         todo.completed && "opacity-50 decoration-line"
       }`}

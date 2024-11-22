@@ -8,6 +8,7 @@ Welcome to **DO-IT-NOW**, your ultimate productivity enhancement tool! This web 
 - **Task List**: Easily add, edit, and mark tasks as completed. Also you can filter task by completed or active.
 - **Daily Inspiration**: Get motivated with motivational phrases of the greatest of all time.
 - **Key Life Areas**: Section with contents to improve on the life areas that really matters.
+- **Pleasant Animations**: The app uses Framer Motion for all animations, creating a more enjoyable user experience.
 
 ## Installation
 To get started with DO-IT-PROJECT:
@@ -17,7 +18,7 @@ To get started with DO-IT-PROJECT:
 2. **Navigate to the project directory**
 
 3. **Install dependencies**:
-```npm install```
+```npm install``` or ```pnpm install```
 
 4. **Run the development server**:
-```npm run dev```
+```npm run dev``` or ```pnpm dev```

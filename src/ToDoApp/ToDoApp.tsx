@@ -43,7 +43,6 @@ const ToDoApp: React.FC = () => {
 
   return (
     <motion.section
-      ref={constraintsRef}
       layout
       className="md:ml-20 p-2 rounded-md h-fit md:basis-2/5"
     >
@@ -51,7 +50,7 @@ const ToDoApp: React.FC = () => {
         <NewTaskForm filter={filter} dispatch={dispatch} />
       )}
       <Reorder.Group
-        dragConstraints={{}}
+        ref={constraintsRef}
         axis="y"
         values={toDoState}
         onReorder={(value) => {

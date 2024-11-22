@@ -1,5 +1,4 @@
 import VitalAreaCard from "@/ContentsSection/VitalAreaCard";
-import { delay } from "motion";
 import { motion } from "motion/react";
 
 const vitalAreas = [

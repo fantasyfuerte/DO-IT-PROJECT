@@ -33,5 +33,8 @@ export function reduce(todos: ToDo[], action: ActionDispatch): ToDo[] {
           return { ...todo, completed: !todo.completed };
         return todo;
       });
+    case DispatchType.SET:
+      return todos
   }
+  return todos;
 }

@@ -16,6 +16,7 @@ export enum DispatchType {
   ADD = "add",
   DELETE = "delete",
   COMPLETE = "complete",
+  SET = "set",
 }
 
 export interface ActionDispatch {
@@ -23,6 +24,7 @@ export interface ActionDispatch {
   payload: {
     id: ID;
     title?: string;
+    todos?:ToDo[]
   };
 }
 

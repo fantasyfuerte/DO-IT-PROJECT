@@ -1,10 +1,10 @@
-import { type ToDo } from "@/types.d";
+import { DispatchType, type ToDo } from "@/types.d";
 import { useEffect, useReducer, useState } from "react";
 import ToDoCard from "./components/ToDoCard";
 import NewTaskForm from "./components/NewTaskForm";
 import { getData, saveData } from "@/services";
 import { reduce } from "@/services";
-import { motion } from "motion/react";
+import { motion, Reorder } from "motion/react";
 
 const initial = getData("data");
 
@@ -48,16 +48,22 @@ const ToDoApp: React.FC = () => {
       {toDoState.length < 5 && (
         <NewTaskForm filter={filter} dispatch={dispatch} />
       )}
-      <ul>
+      <Reorder.Group
+        axis="y"
+        values={filteredTodos}
+        onReorder={setFilteredTodos}
+      >
         {filteredTodos.length == 0 && (
           <p className="text-center opacity-60 text-lg font-semibold">
             No tasks
           </p>
         )}
         {filteredTodos.map((todo, index) => (
-          <ToDoCard todo={todo} dispatch={dispatch} key={todo.id} i={index} />
+          <Reorder.Item value={todo} key={todo.id}>
+            <ToDoCard todo={todo} dispatch={dispatch} key={todo.id} i={index} />
+          </Reorder.Item>
         ))}
-      </ul>
+      </Reorder.Group>
       <motion.div className="flex justify-around">
         <motion.button
           initial={{ opacity: 0 }}

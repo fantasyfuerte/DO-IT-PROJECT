@@ -36,14 +36,14 @@ const ContentSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           className="text-5xl text-center font-semibold my-3"
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.35 }}
         >
           Why this 3 areas
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.7 }}
           className="text-gray-950 text-xl m-4"
         >
           These three areas are fundamental to a fulfilling and balanced life,

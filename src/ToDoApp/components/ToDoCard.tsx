@@ -5,7 +5,7 @@ import {
   RiDeleteBack2Fill,
 } from "react-icons/ri";
 import { Reorder } from "motion/react";
-import { useState } from "react";
+import { memo, useState } from "react";
 
 interface Props {
   todo: ToDo;
@@ -14,15 +14,14 @@ interface Props {
   constraints: React.MutableRefObject<null>;
 }
 
-const ToDoCard: React.FC<Props> = ({ todo, dispatch, i, constraints }) => {
+const ToDoCard: React.FC<Props> = memo(({ todo, dispatch, i, constraints }) => {
+  const [isClickable, setIsClickable] = useState(true);
   const delay = (i + 1.5) / 10;
 
   const HandleClick = () => {
     if (!isClickable) return;
     dispatch({ type: DispatchType.COMPLETE, payload: { id: todo.id } });
   };
-
-  const [isClickable, setIsClickable] = useState(true);
 
   return (
     <Reorder.Item
@@ -66,6 +65,6 @@ const ToDoCard: React.FC<Props> = ({ todo, dispatch, i, constraints }) => {
       />
     </Reorder.Item>
   );
-};
+})
 
 export default ToDoCard;

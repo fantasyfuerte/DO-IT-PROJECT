@@ -44,21 +44,13 @@ const ContentSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="text-gray-950 text-xl m-4"
+          className="text-gray-950 text-xl m-8 mt-12 text-center text-pretty"
         >
           These three areas are fundamental to a fulfilling and balanced life,
           and are inextricably linked. They don't exist in isolation; instead,
           they influence and support each other in a complex interplay.
           Improvements in one area often create a positive ripple effect,
-          boosting progress in the others. For example, improved physical health
-          through regular exercise can lead to increased energy levels, boosting
-          mental well-being and potentially productivity, which can contribute
-          to improved financial security. Conversely, challenges in one area can
-          trigger a negative cascade. Neglecting mental health, for instance,
-          can lead to decreased productivity and potentially financial hardship,
-          which, in turn, can exacerbate feelings of stress and anxiety, further
-          impacting mental well-being. Therefore, an integrated approach is
-          absolutely essential. Focusing solely on one area, while neglecting
+          boosting progress in the others.  Focusing solely on one area, while neglecting
           the interconnectedness with the others, would not only limit progress
           in those neglected areas but would also ultimately hinder overall
           advancement and the achievement of a truly balanced and fulfilling

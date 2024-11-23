@@ -5,6 +5,7 @@ import {
   RiDeleteBack2Fill,
 } from "react-icons/ri";
 import { Reorder } from "motion/react";
+import { useState } from "react";
 
 interface Props {
   todo: ToDo;
@@ -17,8 +18,11 @@ const ToDoCard: React.FC<Props> = ({ todo, dispatch, i, constraints }) => {
   const delay = (i + 1.5) / 10;
 
   const HandleClick = () => {
+    if (!isClickable) return;
     dispatch({ type: DispatchType.COMPLETE, payload: { id: todo.id } });
   };
+
+  const [isClickable, setIsClickable] = useState(true);
 
   return (
     <Reorder.Item
@@ -33,10 +37,14 @@ const ToDoCard: React.FC<Props> = ({ todo, dispatch, i, constraints }) => {
         boxShadow: "0 0 10px #fff",
         transition: { delay: 0 },
       }}
+      onDrag={() => setIsClickable(false)}
       className={`flex items-center gap-3 bg-gray-950 w-full justify-between px-3 py-1 rounded-lg md:rounded-sm my-1 cursor-pointer ${
         todo.completed && "opacity-50 decoration-line"
       }`}
       onClick={HandleClick}
+      onMouseUp={() => {
+        setTimeout(() => setIsClickable(true), 100);
+      }}
     >
       {todo.completed ? (
         <RiCheckboxFill size={20} color="#fff" className="hidden md:inline" />

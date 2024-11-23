@@ -11,8 +11,7 @@ export const HomePage: React.FC = () => {
         <QuotesApp />
       </div>
       <ScrollDownText />
-      <ContentSection />
-      
+      <ContentSection />     
     </>
   );
 };

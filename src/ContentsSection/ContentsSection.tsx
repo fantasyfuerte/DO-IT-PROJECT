@@ -46,17 +46,14 @@ const ContentSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="text-gray-950 text-xl m-8 mt-12 text-center text-pretty"
+          className="text-gray-950 text-xl mt:m-8 mt-12 text-center md:text-pretty"
         >
           These three areas are fundamental to a fulfilling and balanced life,
           and are inextricably linked. They don't exist in isolation; instead,
           they influence and support each other in a complex interplay.
-          Improvements in one area often create a positive ripple effect,
-          boosting progress in the others. Focusing solely on one area, while
-          neglecting the interconnectedness with the others, would not only
-          limit progress in those neglected areas but would also ultimately
-          hinder overall advancement and the achievement of a truly balanced and
-          fulfilling life. A holistic strategy that acknowledges and addresses
+          <br/>Improvements in one area often create a positive ripple effect,
+          boosting progress in the others.<br/>
+          A holistic strategy that acknowledges and addresses
           the synergistic relationships between these three key areas is the
           most effective path towards sustainable and comprehensive well-being.
         </motion.p>

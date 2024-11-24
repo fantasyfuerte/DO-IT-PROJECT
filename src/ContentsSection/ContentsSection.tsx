@@ -4,19 +4,19 @@ const vitalAreas = [
   {
     id: 1,
     title: "Health",
-    route: "/health",
+    route: "#health",
     color: "text-green-950",
   },
   {
     id: 2,
     title: "Social",
-    route: "/social",
+    route: "#social",
     color: "text-red-950",
   },
   {
     id: 3,
     title: "Thrive",
-    route: "/thrive",
+    route: "#thrive",
     color: "text-purple-950",
   },
 ];

@@ -23,12 +23,6 @@ article > h2 {
   text-shadow: 0 5px 15px #000000;
 }
 
-.vitalareacard{
-  transition:background 1s;
-}
-
-
-
 @media (min-width: 768px) {
   .height-80 {
     height: 84vh;

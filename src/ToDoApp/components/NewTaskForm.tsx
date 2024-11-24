@@ -50,7 +50,7 @@ const NewTaskForm: React.FC<Props> = ({ dispatch, filter }) => {
       <motion.button
         className="inline-block md:hidden p-1 text-white bg-gray-900 rounded-full ml-1 mb-2"
         onClick={handlePress}
-        whileTap={{scale:1.15}}
+        whileTap={{ scale: 1.15 }}
       >
         <PlusIcon />
       </motion.button>

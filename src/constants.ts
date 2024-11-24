@@ -1,4 +1,4 @@
-import { route,type Quote } from "./types";
+import { route, type Quote } from "./types";
 
 export const routes: route[] = [
   { title: "How to use", url: "/", bold: true },

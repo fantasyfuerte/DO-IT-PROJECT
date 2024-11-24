@@ -51,11 +51,12 @@ const ContentSection = () => {
           These three areas are fundamental to a fulfilling and balanced life,
           and are inextricably linked. They don't exist in isolation; instead,
           they influence and support each other in a complex interplay.
-          <br/>Improvements in one area often create a positive ripple effect,
-          boosting progress in the others.<br/>
-          A holistic strategy that acknowledges and addresses
-          the synergistic relationships between these three key areas is the
-          most effective path towards sustainable and comprehensive well-being.
+          <br />
+          Improvements in one area often create a positive ripple effect,
+          boosting progress in the others.
+          <br />A holistic strategy that acknowledges and addresses the
+          synergistic relationships between these three key areas is the most
+          effective path towards sustainable and comprehensive well-being.
         </motion.p>
       </article>
     </>

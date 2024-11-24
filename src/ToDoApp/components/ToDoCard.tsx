@@ -65,6 +65,6 @@ const ToDoCard: React.FC<Props> = memo(({ todo, dispatch, i, constraints }) => {
       />
     </Reorder.Item>
   );
-})
+});
 
 export default ToDoCard;

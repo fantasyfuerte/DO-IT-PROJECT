@@ -16,7 +16,7 @@ const ContentSection = () => {
       </section>
       <WhyThisAreas />
       <section>
-        {articles.map(article=><StyledArticle title={article.title} subtitle={article.subtitle} paragraph={article.paragraph} imgs={article.imgs}/>)}
+        {articles.map(article=><StyledArticle title={article.title} subtitle={article.subtitle} paragraph={article.paragraph} imgs={article.imgs} centerImg={article.centerImg}/>)}
       </section>
     </>
   );

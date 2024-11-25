@@ -5,7 +5,7 @@ interface Props {
 const StyledArticle: React.FC<Props> = () => {
   return (
     <article className="flex max-h-max flex-wrap items-end mb-48">
-      <div className="basis-6/12 flex-grow min-w-[28em] pr-4 md:pr-0 pl-4 mb-7">
+      <div className="basis-6/12 flex-grow min-w-min pr-4 md:pr-0 pl-4 mb-7">
         <h5 className="text-5xl">
           Health: <br />
           <strong className="text-gray-950">The Cornerstone</strong>

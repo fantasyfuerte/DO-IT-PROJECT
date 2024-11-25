@@ -15,13 +15,13 @@ const ContentSection = () => {
       </section>
       <WhyThisAreas />
       <section>
-        <article className="flex max-h-max flex-wrap items-center mb-48 pl-4">
+        <article className="flex max-h-max flex-wrap items-end mb-48 pl-4">
           <div className="basis-6/12 flex-grow min-w-[28em]">
             <h5 className="text-5xl">
               Health: <br />{" "}
               <strong className="text-gray-950">The Cornerstone</strong>
             </h5>
-            <p className="text-lg font-semibold mt-5 text-pretty first-letter:ml-2">
+            <p className="text-lg font-semibold mt-8 text-pretty first-letter:ml-2">
               Health is fundamental for a full and balanced life. Adopting an
               ancestral diet, rich in natural and unprocessed foods, can
               strengthen both body and mind. Sun exposure not only boosts your
@@ -34,10 +34,10 @@ const ContentSection = () => {
               incorporate them into your routine?
             </p>
           </div>
-          <div className="basis-5/12 flex-grow h-80 p-4">
+          <div className="basis-5/12 flex-grow h-80 p-5 pb-0">
             <img
-              src="./health/h3.jpg"
-              className="object-cover w-full h-full rounded-xl"
+              src="./health/h4.jpg"
+              className="object-cover object-bottom w-full h-full rounded-xl"
             />
           </div>
         </article>

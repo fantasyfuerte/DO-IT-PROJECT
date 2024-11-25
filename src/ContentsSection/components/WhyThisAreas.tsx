@@ -1,7 +1,7 @@
 import {motion} from 'motion/react'
 
 const WhyThisAreas = () =>{
-    return <article className="px-6 mt-10 h-screen">
+    return <article className="px-6 mt-10 h-[80vh]">
     <motion.h2
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -18,7 +18,7 @@ const WhyThisAreas = () =>{
     >
       These three areas are fundamental to a fulfilling and balanced life,
       and are inextricably linked. They don't exist in isolation; instead,
-      they influence and support each other in a complex interplay.
+      they inf8uence and support each other in a complex interplay.
       <br />
       Improvements in one area often create a positive ripple effect,
       boosting progress in the others.

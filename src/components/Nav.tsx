@@ -1,7 +1,7 @@
-import { type route } from "../types";
+import { Route } from "../types";
 
 interface Props {
-  routes: route[];
+  routes: Route[];
 }
 
 const navItemStyle = "text-xl hover:opacity-50 transition cursor-pointer";
@@ -15,12 +15,12 @@ const Nav: React.FC<Props> = ({ routes }) => {
         DO-IT-NOW
       </h2>
       <section className="hidden md:flex flex-row gap-5 pr-3">
-        {routes.map((route) => (
+        {routes.map((Route) => (
           <p
-            key={`${route.title}${route.url}`}
-            className={route.bold ? navItemBoldStyle : navItemStyle}
+            key={`${Route.title}${Route.url}`}
+            className={Route.bold ? navItemBoldStyle : navItemStyle}
           >
-            {route.title}
+            {Route.title}
           </p>
         ))}
       </section>

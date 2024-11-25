@@ -1,8 +1,29 @@
-import { route, type Quote } from "./types";
+import { Route, VitalArea, type Quote } from "./types";
 
-export const routes: route[] = [
-  { title: "How to use", url: "/", bold: true },
-  { title: "About us", url: "/" },
+export const routes: Route[] = [
+  { title: "How to use", url: "#", bold: true },
+  { title: "About us", url: "#" },
+];
+
+export const vitalAreas: VitalArea[] = [
+  {
+    id: 1,
+    title: "Health",
+    url: "#health",
+    color: "text-green-950",
+  },
+  {
+    id: 2,
+    title: "Social",
+    url: "#social",
+    color: "text-red-950",
+  },
+  {
+    id: 3,
+    title: "Thrive",
+    url: "#thrive",
+    color: "text-purple-950",
+  },
 ];
 
 export const Quotes: Quote[] = [

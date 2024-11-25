@@ -1,7 +1,7 @@
 import {motion} from 'motion/react'
 
 const WhyThisAreas = () =>{
-    return <article className="px-6 mt-10 h-[80vh]">
+    return <article className="px-6 mt-16 h-[80vh]">
     <motion.h2
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}

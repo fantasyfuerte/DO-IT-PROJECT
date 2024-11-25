@@ -336,3 +336,10 @@ export const Quotes: Quote[] = [
     content: "An investment in knowledge always pays the best interest.",
   },
 ];
+
+export const articles = [{
+  title:"Health",
+  subtitle:"The Cornerstone",
+  paragraph:"Health is fundamental for a full and balanced life. Adopting an ancestral diet, rich in natural and unprocessed foods, can strengthen both body and mind. Sun exposure not only boosts your mood and vitamin D production, but it also makes you more attractive by giving your skin a beautiful tan. Additionally, intermittent fasting promotes efficient digestion and helps regulate metabolism. Habits like these create synergy among themselves and with other areas of your life, enhancing your overall well-being. Interested in learning more about how to incorporate them into your routine?",
+  imgs:["./health/h1.jpg","./health/h2.jpg","./health/h3.jpg","./health/h4.jpg"]
+}]

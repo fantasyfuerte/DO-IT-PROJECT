@@ -1,8 +1,13 @@
-export type route = {
+export interface Route {
   title: string;
-  url: `/${string}`;
+  url: `#${string}`;
   bold?: true;
-};
+}
+
+export interface VitalArea extends Route {
+  color: string;
+  id: number;
+}
 
 export type ToDo = {
   title: string;
@@ -24,7 +29,7 @@ export interface ActionDispatch {
   payload: {
     id: ID;
     title?: string;
-    todos?:ToDo[]
+    todos?: ToDo[];
   };
 }
 

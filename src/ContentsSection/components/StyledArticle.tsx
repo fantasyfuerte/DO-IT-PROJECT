@@ -7,6 +7,7 @@ interface Props {
   paragraph: string;
   imgs: string[];
   centerImg?: boolean;
+  id?: string;
 }
 
 const StyledArticle: React.FC<Props> = ({
@@ -15,6 +16,7 @@ const StyledArticle: React.FC<Props> = ({
   paragraph,
   imgs,
   centerImg,
+  id,
 }) => {
   const [img, setImg] = useState(0);
   const changeImg = () => {
@@ -25,6 +27,7 @@ const StyledArticle: React.FC<Props> = ({
   };
   return (
     <motion.article
+      id={id}
       transition={{ delay: 0.5, duration: 0.2 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}

@@ -349,6 +349,7 @@ export const articles = [
       "./health/h3.jpg",
       "./health/h4.jpg",
     ],
+    id: "health",
   },
   {
     title: "Social",
@@ -362,6 +363,7 @@ export const articles = [
       "./social/s4.jpg",
     ],
     centerImg: true,
+    id: "social",
   },
   {
     title: "Thrive",
@@ -375,5 +377,6 @@ export const articles = [
       "./thrive/t4.jpg",
     ],
     centerImg: true,
+    id: "thrive",
   },
 ];

@@ -352,7 +352,7 @@ export const articles = [
   },
   {
     title: "Social",
-    subtitle: "Loveless life?",
+    subtitle: "Loveless Life?",
     paragraph:
       "Relationships are essential for our well-being, improving both physical health and professional life. Sex, for instance, not only strengthens the immune system and enhances circulation but also reduces stress and increases longevity. Furthermore, romantic relationships can boost your job performance by providing emotional support, increasing motivation, and fostering a balance between personal and professional life. Cultivating meaningful relationships enriches every aspect of our lives, making us healthier and more successful.",
     imgs: [
@@ -360,6 +360,19 @@ export const articles = [
       "./social/s2.jpg",
       "./social/s3.jpg",
       "./social/s4.jpg",
+    ],
+    centerImg: true,
+  },
+  {
+    title: "thrive",
+    subtitle: "The Abundant Life",
+    paragraph:
+      "Professional life is fundamental for our development and personal satisfaction. Through work, we obtain the necessary resources for our subsistence and find a sense of purpose and belonging. A good work life can improve health by reducing stress. Additionally, finding gratification in work strengthens relationships by providing emotional stability and quality time with loved ones. Professional growth fosters skills, enhances self-esteem, and enriches every aspect of our lives.",
+    imgs: [
+      "./thrive/t1.jpg",
+      "./thrive/t2.jpg",
+      "./thrive/t3.jpg",
+      "./thrive/t4.jpg",
     ],
     centerImg: true,
   },

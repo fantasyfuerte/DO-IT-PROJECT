@@ -1,6 +1,6 @@
 import VitalAreaCard from "@/ContentsSection/components/VitalAreaCard";
 import WhyThisAreas from "@/ContentsSection/components/WhyThisAreas";
-import { vitalAreas,articles } from "@/constants";
+import { vitalAreas, articles } from "@/constants";
 import StyledArticle from "./components/StyledArticle";
 
 const ContentSection = () => {
@@ -16,7 +16,15 @@ const ContentSection = () => {
       </section>
       <WhyThisAreas />
       <section>
-        {articles.map(article=><StyledArticle title={article.title} subtitle={article.subtitle} paragraph={article.paragraph} imgs={article.imgs} centerImg={article.centerImg}/>)}
+        {articles.map((article) => (
+          <StyledArticle
+            title={article.title}
+            subtitle={article.subtitle}
+            paragraph={article.paragraph}
+            imgs={article.imgs}
+            centerImg={article.centerImg}
+          />
+        ))}
       </section>
     </>
   );

@@ -18,6 +18,7 @@ const ContentSection = () => {
       <section>
         {articles.map((article) => (
           <StyledArticle
+            id={article.id}
             title={article.title}
             subtitle={article.subtitle}
             paragraph={article.paragraph}

@@ -364,7 +364,7 @@ export const articles = [
     centerImg: true,
   },
   {
-    title: "thrive",
+    title: "Thrive",
     subtitle: "The Abundant Life",
     paragraph:
       "Professional life is fundamental for our development and personal satisfaction. Through work, we obtain the necessary resources for our subsistence and find a sense of purpose and belonging. A good work life can improve health by reducing stress. Additionally, finding gratification in work strengthens relationships by providing emotional stability and quality time with loved ones. Professional growth fosters skills, enhances self-esteem, and enriches every aspect of our lives.",

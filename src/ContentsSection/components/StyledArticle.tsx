@@ -1,3 +1,6 @@
+import { motion } from "motion/react";
+import { useState } from "react";
+
 interface Props {
   title: string;
   subtitle: string;
@@ -13,8 +16,20 @@ const StyledArticle: React.FC<Props> = ({
   imgs,
   centerImg,
 }) => {
+  const [img, setImg] = useState(0);
+  const changeImg = () => {
+    setImg((prev) => {
+      if (prev == imgs.length - 1) return 0;
+      return prev + 1;
+    });
+  };
   return (
-    <article className="flex max-h-max flex-wrap items-end mb-48">
+    <motion.article
+      transition={{ delay: 0.5, duration: 0.2 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="flex max-h-max flex-wrap items-end mb-48"
+    >
       <div className="basis-6/12 flex-grow min-w-min pr-4 md:pr-0 pl-4 mb-7">
         <h5 className="text-5xl">
           {title}: <br />
@@ -25,14 +40,15 @@ const StyledArticle: React.FC<Props> = ({
         </p>
       </div>
       <div className="basis-5/12 flex-grow h-80 px-2 md:p-5 pb-0">
-        <img
-          src={imgs[3]}
+        <motion.img
+          onViewportEnter={changeImg}
+          src={imgs[img]}
           className={`object-cover ${
             !centerImg && "object-bottom"
           } w-full h-full rounded-xl`}
         />
       </div>
-    </article>
+    </motion.article>
   );
 };
 

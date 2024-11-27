@@ -6,9 +6,9 @@ Welcome to **DO-IT-NOW**, your ultimate productivity enhancement tool! This web 
 
 ## Features
 - **Task List**: Easily add, edit, and mark tasks as completed. Also you can filter task by completed or active.
-- **Daily Inspiration**: Get motivated with motivational phrases of the greatest of all time.
-- **Key Life Areas**: Section with contents to improve on the life areas that really matters.
-- **Pleasant Animations**: The app uses Framer Motion for all animations, creating a more enjoyable user experience.
+- **Daily Inspiration**: Get motivated with motivational phrases of the greatest of all time. The app automatically give you a random quote.
+- **Key Life Areas**: Section with contents to improve on the life areas that really matters. Provide a explanation of each area.
+- **Pleasant Animations**: The app uses Motion for all animations, creating a more enjoyable user experience and drag to reorder tasks.
 
 ## Installation
 To get started with DO-IT-PROJECT:

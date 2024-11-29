@@ -16,12 +16,13 @@ const Nav: React.FC<Props> = ({ routes }) => {
       </h2>
       <section className="hidden md:flex flex-row gap-5 pr-3">
         {routes.map((Route) => (
-          <p
+          <a
             key={`${Route.title}${Route.url}`}
             className={Route.bold ? navItemBoldStyle : navItemStyle}
+            href={Route.url}
           >
             {Route.title}
-          </p>
+          </a>
         ))}
       </section>
     </nav>

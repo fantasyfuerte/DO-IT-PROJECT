@@ -1,7 +1,7 @@
 import { Route, VitalArea, type Quote } from "./types";
 
 export const routes: Route[] = [
-  { title: "How to use", url: "#", bold: true },
+  { title: "How to use", url: "#how-to-use", bold: true },
   { title: "About us", url: "#" },
 ];
 

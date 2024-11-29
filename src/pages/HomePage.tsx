@@ -11,7 +11,7 @@ export const HomePage: React.FC = () => {
       </div>
       <ContentSection />
       <section>
-        <article id="how-to-use" className="bg-white p-6 rounded-lg shadow-lg w-full">
+        <article id="how-to-use" className="bg-white p-2 rounded-lg shadow-lg w-full">
           <h4 className="text-4xl font-bold text-center text-gray-950 mb-4">
             How to Use
           </h4>

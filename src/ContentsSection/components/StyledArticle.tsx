@@ -34,7 +34,7 @@ const StyledArticle: React.FC<Props> = ({
       className="flex max-h-max flex-wrap items-end mb-48"
     >
       <div className="basis-6/12 flex-grow min-w-min pr-4 md:pr-0 pl-4 mb-7">
-        <h5 className="text-5xl w-screen md:w-full">
+        <h5 className="text-5xl min-w-60">
           {title}: <br />
           <strong className="text-gray-950">{subtitle}</strong>
         </h5>

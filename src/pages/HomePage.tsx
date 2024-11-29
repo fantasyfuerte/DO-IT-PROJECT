@@ -1,3 +1,4 @@
+import AboutUs from "@/components/AboutUs";
 import HowToUse from "@/components/HowToUse";
 import ContentSection from "@/ContentsSection/ContentsSection";
 import QuotesApp from "@/QuotesApp/QuotesApp";
@@ -13,6 +14,7 @@ export const HomePage: React.FC = () => {
       <ContentSection />
       <section>
         <HowToUse />
+        <AboutUs/>
       </section>
     </>
   );

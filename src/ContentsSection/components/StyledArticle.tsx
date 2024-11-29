@@ -34,7 +34,7 @@ const StyledArticle: React.FC<Props> = ({
       className="flex max-h-max flex-wrap items-end mb-48"
     >
       <div className="basis-6/12 flex-grow min-w-min pr-4 md:pr-0 pl-4 mb-7">
-        <h5 className="text-5xl">
+        <h5 className="text-5xl w-screen md:w-full">
           {title}: <br />
           <strong className="text-gray-950">{subtitle}</strong>
         </h5>
@@ -44,6 +44,9 @@ const StyledArticle: React.FC<Props> = ({
       </div>
       <div className="basis-5/12 flex-grow h-80 px-2 md:p-5 pb-0">
         <motion.img
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.2 }}
           onViewportEnter={changeImg}
           src={imgs[img]}
           className={`object-cover ${

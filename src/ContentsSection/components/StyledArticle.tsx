@@ -28,7 +28,7 @@ const StyledArticle: React.FC<Props> = ({
   return (
     <motion.article
       id={id}
-      transition={{ delay: 0.5, duration: 0.2 }}
+      transition={{ delay: 0.3, duration: 0.2 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       className="flex max-h-max flex-wrap items-end mb-48"
@@ -46,7 +46,7 @@ const StyledArticle: React.FC<Props> = ({
         <motion.img
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.2 }}
+          transition={{ delay: 0.3, duration: 0.2 }}
           onViewportEnter={changeImg}
           src={imgs[img]}
           className={`object-cover ${

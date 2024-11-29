@@ -1,6 +1,11 @@
+import { motion } from "motion/react";
+
 export default function HowToUse() {
   return (
-    <article
+    <motion.article
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.3, delay: 0.3 }}
       id="how-to-use"
       className="bg-white p-2 rounded-lg shadow-lg w-full"
     >
@@ -38,6 +43,6 @@ export default function HowToUse() {
         With <strong>Do-It-Now</strong>, staying organized is easy and
         motivating! Start now and transform your days!
       </p>
-    </article>
+    </motion.article>
   );
 }

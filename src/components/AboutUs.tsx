@@ -7,7 +7,7 @@ export default function AboutUs() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.3, delay: 0.2 }}
       id="about-us"
-      className="bg-white p-8 rounded-lg shadow-lg"
+      className="bg-white p-8 rounded-lg shadow-lg mt-36 mb-20"
     >
       <h1 className="text-3xl font-bold text-gray-950 text-center mb-6">
         About Us

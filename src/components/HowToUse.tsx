@@ -7,7 +7,7 @@ export default function HowToUse() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.3, delay: 0.3 }}
       id="how-to-use"
-      className="bg-white p-2 rounded-lg w-full"
+      className="bg-white p-2 rounded-lg w-full mt-36"
     >
       <h4 className="text-4xl font-bold text-center text-gray-950 mb-4">
         How to Use

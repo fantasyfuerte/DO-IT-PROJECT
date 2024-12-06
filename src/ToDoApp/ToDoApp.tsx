@@ -5,6 +5,8 @@ import NewTaskForm from "./components/NewTaskForm";
 import { getData, saveData } from "@/services";
 import { reduce } from "@/services";
 import { motion, Reorder } from "motion/react";
+import FilterButtons from "./components/FilterButtons";
+import { filters } from "@/types.d";
 
 const initial = getData("data");
 
@@ -15,12 +17,6 @@ const initialState: ToDo[] = initial ?? [
     completed: false,
   },
 ];
-
-export enum filters {
-  ALL = "add",
-  ACTIVE = "active",
-  COMPLETED = "completed",
-}
 
 const ToDoApp: React.FC = () => {
   const [toDoState, dispatch] = useReducer(reduce, initialState);
@@ -75,43 +71,7 @@ const ToDoApp: React.FC = () => {
           />
         ))}
       </Reorder.Group>
-      <motion.div className="flex justify-around">
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1 px-2"
-          onClick={() => {
-            setFilter(filters.ALL);
-          }}
-        >
-          All
-        </motion.button>
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1 px-2"
-          onClick={() => {
-            setFilter(filters.ACTIVE);
-          }}
-        >
-          Active
-        </motion.button>
-        {toDoState.filter((todo) => todo.completed).length > 0 && (
-          <motion.button
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.5 }}
-            className="rounded-md bg-gray-950 basis-1/3 text-white font-semibold mx-5 py-1 px-2"
-            onClick={() => {
-              setFilter(filters.COMPLETED);
-            }}
-          >
-            Completed
-          </motion.button>
-        )}
-      </motion.div>
+      <FilterButtons setFilter={setFilter} toDoState={toDoState} />
     </motion.section>
   );
 };

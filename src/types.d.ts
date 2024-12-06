@@ -38,3 +38,9 @@ export type Quote = {
   author: string;
   id: ID;
 };
+
+export enum filters {
+  ALL = "add",
+  ACTIVE = "active",
+  COMPLETED = "completed",
+}

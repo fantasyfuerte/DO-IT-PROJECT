@@ -1,5 +1,5 @@
 import { DispatchType, ActionDispatch } from "@/types.d";
-import { filters } from "../ToDoApp";
+import { filters } from "@/types.d";
 import { PlusIcon } from "lucide-react";
 import { motion } from "motion/react";
 

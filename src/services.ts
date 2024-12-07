@@ -33,6 +33,8 @@ export function reduce(todos: ToDo[], action: ActionDispatch): ToDo[] {
           return { ...todo, completed: !todo.completed };
         return todo;
       });
+    case DispatchType.CLEAR:
+      return todos.filter((todo) => todo.completed != true);
     case DispatchType.SET:
       if (action.payload.todos) return action.payload.todos;
   }

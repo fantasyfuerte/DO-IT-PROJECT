@@ -22,6 +22,7 @@ export enum DispatchType {
   DELETE = "delete",
   COMPLETE = "complete",
   SET = "set",
+  CLEAR = "clear"
 }
 
 export interface ActionDispatch {

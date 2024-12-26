@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 import { Quotes } from "../constants";
 import { QuoteCard } from "./components/QuoteCard";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 
 const QuotesApp: React.FC = () => {
   function getRandomNumber(max: number): number {
     return Math.floor(Math.random() * max);
   }
 
-  const [currentIndex, setCurrentIndex] = useState(getRandomNumber(50));
+  const [currentIndex, setCurrentIndex] = useState(
+    getRandomNumber(Quotes.length)
+  );
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex(getRandomNumber(50));
+      setCurrentIndex(getRandomNumber(Quotes.length));
     }, 10000);
     return () => clearInterval(intervalId);
   }, []);
@@ -21,10 +23,19 @@ const QuotesApp: React.FC = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 1.8 }}
+      transition={{ duration: 0.5 }}
       className="mt-20 md:mt-0 md:ml-6 inline-block p-6 basis-3/5"
     >
-      <QuoteCard quote={Quotes[currentIndex]} />
+      <AnimatePresence mode="wait">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          key={currentIndex}
+          exit={{ opacity: 0 }}
+        >
+          <QuoteCard quote={Quotes[currentIndex]} />
+        </motion.div>
+      </AnimatePresence>
     </motion.section>
   );
 };

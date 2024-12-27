@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to **DO-IT-NOW**, your ultimate productivity enhancement tool! This web application is designed to help you achieve your daily goals effortlessly and stay organized throughout your day.
+Welcome to **DO-IT-NOW**, your ultimate productivity enhancement tool! This web application is designed to help you achieve your daily goals effortlessly and stay organized throughout your day making hte progress smoother.
 
 ## Enjoy the app
 

@@ -28,10 +28,11 @@ const QuotesApp: React.FC = () => {
     >
       <AnimatePresence mode="wait">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, transform: "translateX(20px)" }}
+          animate={{ opacity: 1, transform: "translateX(0)" }}
+          transition={{ duration: 1 }}
           key={currentIndex}
-          exit={{ opacity: 0 }}
+          exit={{ opacity: 0, transform: "translateX(-20px)" }}
         >
           <QuoteCard quote={Quotes[currentIndex]} />
         </motion.div>

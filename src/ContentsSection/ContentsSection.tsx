@@ -9,7 +9,7 @@ const ContentSection = () => {
       <h6 className="text-xl text-center px-3">
         When unsure where to begin, start with these three areas of your life:
       </h6>
-      <section className="h-[70vh] flex flex-col md:flex-row md:flex-wrap ">
+      <section className="flex flex-col md:flex-row md:flex-wrap md:mx-28 pb-12">
         {vitalAreas.map((area) => (
           <VitalAreaCard key={area.id} area={area} />
         ))}

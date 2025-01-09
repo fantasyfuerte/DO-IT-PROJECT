@@ -47,10 +47,10 @@ const StyledArticle: React.FC<Props> = ({
       transition={{ delay: 0.3, duration: 0.2 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className="flex max-h-max flex-wrap items-end pt-32"
+      className="flex max-h-max flex-wrap items-end pt-32 mx-4 md:mx-16 gap-10"
     >
-      <div className="basis-6/12 flex-grow min-w-min pr-4 md:pr-0 pl-4 mb-7">
-        <h5 className="text-5xl min-w-60">
+      <div className="basis-6/12 flex-grow min-w-min pr-4 md:pr-0 pl-4">
+        <h5 className="text-5xl min-w-60 ml-2">
           {title}: <br />
           <strong className="text-gray-950">{subtitle}</strong>
         </h5>
@@ -58,7 +58,7 @@ const StyledArticle: React.FC<Props> = ({
           {paragraph}
         </p>
       </div>
-      <div className="basis-5/12 flex-grow h-80 px-2 md:p-5 pb-0">
+      <div className="basis-5/12 flex-grow h-[360px] px-2 md:p-5 pb-0">
         {loaded ? (
           <motion.img
             initial={{ opacity: 0 }}

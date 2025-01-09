@@ -12,9 +12,9 @@ const VitalAreaCard: React.FC<Props> = ({ area }) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: (area.id * 2) / 10, duration: 0.5 }}
-      className={`bg-transparent h-44 md:h-80 flex-grow m-5 rounded-lg flex justify-center items-center vitalareacard cursor-default`}
+      className={`bg-transparent p-10 md:h-80 flex-grow rounded-lg flex justify-center items-center vitalareacard cursor-default`}
     >
-      <h2 className={`${area.color} text-7xl font-black cursor-pointer`}>
+      <h2 className={`${area.color} text-6xl font-black cursor-pointer`}>
         {area.title}
       </h2>
     </motion.a>

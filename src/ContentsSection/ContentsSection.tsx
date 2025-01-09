@@ -6,7 +6,7 @@ import StyledArticle from "./components/StyledArticle";
 const ContentSection = () => {
   return (
     <>
-      <h6 className="text-2xl text-center px-3">
+      <h6 className="text-xl text-center px-3">
         When unsure where to begin, start with these three areas of your life:
       </h6>
       <section className="h-[70vh] flex flex-col md:flex-row md:flex-wrap ">

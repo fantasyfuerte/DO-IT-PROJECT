@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 const WhyThisAreas = () => {
   return (
-    <article className="px-6 mt-16 h-[60vh]">
+    <article className="px-6 mt-16 py-16">
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -15,7 +15,7 @@ const WhyThisAreas = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.7 }}
-        className="text-gray-950 text-xl grid grid-cols-2 gap-10 mx-24 mt-12 text-center"
+        className="text-gray-950 text-lg font-semibold  flex flex-col md:grid md:grid-cols-2 gap-10 mx-4 md:mx-24 mt-12 text-center"
       >
         <p>
           These three areas are fundamental to a fulfilling and balanced life,

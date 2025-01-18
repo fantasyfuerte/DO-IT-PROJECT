@@ -24,7 +24,7 @@ const QuotesApp: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="inline-block mx-2"
+      className="inline-block mx-2 h-screen md:h-fit"
     >
       <AnimatePresence mode="wait">
         <motion.div

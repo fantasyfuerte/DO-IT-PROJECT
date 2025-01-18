@@ -7,7 +7,7 @@ import ToDoApp from "@/ToDoApp/ToDoApp";
 export const HomePage: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col gap-24 md:gap-6 md:grid md:grid-cols-2 md:items-center justify-center px-3 h-screen ]">
+      <div className="flex flex-col gap-24 md:gap-6 md:grid md:grid-cols-2 md:items-center justify-center px-3 h-screen">
         <ToDoApp />
         <QuotesApp />
       </div>

@@ -1,7 +1,7 @@
 import { DispatchType, ActionDispatch } from "@/types.d";
 import { filters } from "@/types.d";
-import { PlusIcon } from "lucide-react";
 import { motion } from "motion/react";
+import { RiStickyNoteAddFill } from "react-icons/ri";
 
 interface Props {
   dispatch: ({}: ActionDispatch) => void;
@@ -40,10 +40,10 @@ const NewTaskForm: React.FC<Props> = ({ dispatch, filter }) => {
         disabled={filter !== filters.ALL ? true : false}
       />
       <motion.button
-        className="inline-block md:hidden p-1 text-white bg-gray-900 rounded-full ml-1 mb-2"
+        className="inline-block md:hidden text-gray-900 rounded-full mb-2 p-2"
         whileTap={{ scale: 1.15 }}
       >
-        <PlusIcon />
+        <RiStickyNoteAddFill size={30} />
       </motion.button>
     </form>
   );

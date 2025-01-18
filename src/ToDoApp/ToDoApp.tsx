@@ -39,7 +39,7 @@ const ToDoApp: React.FC = () => {
 
   return (
     <>
-      <motion.section layout className=" rounded-md h-fit w-full">
+      <motion.section layout className="rounded-md h-fit max-w-lg md:mx-16">
         {toDoState.length < 5 && (
           <NewTaskForm filter={filter} dispatch={dispatch} />
         )}

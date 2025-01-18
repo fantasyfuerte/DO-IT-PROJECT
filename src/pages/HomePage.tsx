@@ -7,14 +7,14 @@ import ToDoApp from "@/ToDoApp/ToDoApp";
 export const HomePage: React.FC = () => {
   return (
     <>
-      <div className="">
+      <div className="grid grid-cols-2">
         <ToDoApp />
         <QuotesApp />
       </div>
       <ContentSection />
       <section>
         <HowToUse />
-        <AboutUs/>
+        <AboutUs />
       </section>
     </>
   );

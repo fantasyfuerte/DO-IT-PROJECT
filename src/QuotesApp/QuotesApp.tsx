@@ -24,7 +24,7 @@ const QuotesApp: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="mt-20 md:mt-0 md:ml-6 inline-block p-6 basis-3/5"
+      className="inline-block"
     >
       <AnimatePresence mode="wait">
         <motion.div

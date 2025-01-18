@@ -12,7 +12,7 @@ export default function HowToUse() {
       <h4 className="text-4xl font-bold text-center text-gray-950 mb-14">
         How to Use
       </h4>
-      <div className="flex flex-col items-center md:grid grid-cols-3 gap-10">
+      <div className="flex flex-col items-center md:grid grid-cols-3 gap-10 text-center">
         <p className="text-gray-800 leading-relaxed text-lg px-3">
           1. <strong>Add your tasks</strong>: Write up to 5 things you need to
           do. Start with the most important ones for you. You can add tasks

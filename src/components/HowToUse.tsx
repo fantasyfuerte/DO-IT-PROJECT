@@ -9,7 +9,7 @@ export default function HowToUse() {
       id="how-to-use"
       className="mt-36 md:px-28"
     >
-      <h4 className="text-4xl font-bold text-center text-gray-950 mb-14">
+      <h4 className="text-3xl font-bold text-center text-gray-950 mb-12">
         How to Use
       </h4>
       <div className="flex flex-col items-center md:grid grid-cols-3 gap-10 text-center">
